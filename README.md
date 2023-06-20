@@ -12,7 +12,7 @@
 Obs: O codigo só mostra mensagem em caso de erro. Verifique os arquivos criados para conferir se está tudo certo. 
 Caso queira fazer outro teste recomendo que apague os arquivos, pois a nova exercução não vai excluir os antigos.
 
-# Bug encontrado
+# Bugs encontrados (Podem ou não podem ocorrer)
 BUG 01 - Em alguns casos a saida do resultado de PI acaba saindo como 'nan' (Not a Number), um problema dificil de ser tradado, pois existe varios motivos para ocorrer esse tipo de problema, como:
 
 * Divisão por zero: Quando você tenta dividir um número por zero, o resultado é indefinido e é representado como "NaN".
@@ -27,7 +27,7 @@ BUG 02 - Caso apareça alguma mensagem como:
 
 * "../../src/mpfr-3.1.5/src/get_str.c:153  MPFR assertion failed: size_s1 >= m"
 
-Reinicie: Apague todos os arquivos criados e reinicie o programa, ou apenas tente novamente. Lembrando que, caso você execute novamente, as requisições que não falharam, estarão juntas no arquivo de saída, pois a função adiciona no final do arquivo as requisições processadas mesmo se algumas não foram processadas.
+Reinicie: Apague todos os arquivos criados e reinicie o programa, ou apenas tente novamente. Lembrando que, caso você execute novamente, apenas as requisições que foram processadas com sucesso estarão presentes no arquivo de saída. As requisições não processadas não serão incluídas.
 
 ## Dificuldades encotradatas no trabalho
 A maior dificuldade, com certeza, foi utilizando a biblioteca pthread, pois eu não tinha muito conhecimento sobre ela, e passei dias tentando resolver o problema de escalonamento e sincronismo. As threads sempre executavam todas as requisições ao invés de dividir o trabalho entre elas. Comentei esse problema com um amigo, e ele me disse que utilizou uma fila para controlar melhor as requisições. Então, resolvi fazer do meu jeito, usando a ideia da fila, e consegui solucionar o problema.
