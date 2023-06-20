@@ -1,10 +1,10 @@
 # Programando com Múltiplas Threads
-##### Antes de tudo verifique se está com a biblioteca do mpfr no seu Ubuntu com o seguinte codigo:
+##### Antes de tudo, verifique se você possui a biblioteca do MPFR instalada em seu sistema Ubuntu, utilizando o seguinte código:
 * "dpkg -l | grep libmpfr" 
-##### Se a biblioteca MPFR estiver instalada, você verá uma linha que contém "libmpfr" e informações sobre a versão instalada, então você pode seguir para a seção de "como compliar". Senão instale usando o codigo abaixo:
+##### Se a biblioteca MPFR estiver instalada, você verá uma linha que contém "libmpfr" e informações sobre a versão instalada. Nesse caso, você pode prosseguir para a seção de "COMO COMPILAR". Caso contrário, instale-a usando o código abaixo:
 * "sudo apt update"
 * "sudo apt install libmpfr-dev"
-##### O processo de instalação começará e você será perguntado se deseja continuar. Digite 'Y' e pressione 'Enter' para confirmar. Aguarde até que o Ubuntu termine de baixar e instalar o pacote MPFR e suas dependências. Após isso basta compilar.
+##### O processo de instalação começará e você será perguntado se deseja continuar. Digite 'Y' e pressione 'Enter' para confirmar. Aguarde até que o Ubuntu termine de baixar e instalar o pacote MPFR e suas dependências. Após isso, basta compilar.
 # Como compilar
 * "gcc main.c -o servidor -lmpfr -lgmp -lpthread"
 * "./servidor <quantidade_requisicoes>"
