@@ -1,9 +1,15 @@
 # Programando com Múltiplas Threads
-## Como compilar
-gcc main.c -o servidor -lmpfr -lgmp -lpthread
-./servidor <quantidade_requisicoes>
+##### Antes de tudo verifique se está com a biblioteca do mpfr no seu Ubuntu com o seguinte codigo:
+* "dpkg -l | grep libmpfr" 
+##### Se a biblioteca MPFR estiver instalada, você verá uma linha que contém "libmpfr" e informações sobre a versão instalada, então você pode seguir para a seção de "como compliar". Senão instale usando o codigo abaixo:
+* "sudo apt update"
+* "sudo apt install libmpfr-dev"
+##### O processo de instalação começará e você será perguntado se deseja continuar. Digite 'Y' e pressione 'Enter' para confirmar. Aguarde até que o Ubuntu termine de baixar e instalar o pacote MPFR e suas dependências. Após isso basta compilar.
+# Como compilar
+* "gcc main.c -o servidor -lmpfr -lgmp -lpthread"
+* "./servidor <quantidade_requisicoes>"
 
-## Bug encontrado
+# Bug encontrado
 Em alguns casos a saida do resultado de PI acaba saindo como 'nan' (Not a Number), um problema dificil de ser tradado, pois existe varios motivos para ocorrer esse tipo de problema, como:
 
 * Divisão por zero: Quando você tenta dividir um número por zero, o resultado é indefinido e é representado como "NaN".
